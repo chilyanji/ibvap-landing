@@ -13,7 +13,6 @@ import {
   Database,
   Eye,
   FileCheck2,
-  Fingerprint,
   Gauge,
   KeyRound,
   Layers3,
@@ -166,7 +165,7 @@ const architecture = [
     rows: [
       ["API & rules", "FastAPI · SQLAlchemy"],
       ["Alerts & evidence", "PostgreSQL 16 · Alembic"],
-      ["Live operations", "SHA-256 ledger · HMAC · Redis · WebSocket"],
+      ["Live operations", "SHA-256 ledger · HMAC · Redis · WebSocket · Prometheus"],
     ],
   },
   {
