@@ -16,7 +16,6 @@ import {
   Gauge,
   KeyRound,
   Layers3,
-  LockKeyhole,
   Menu,
   Moon,
   Network,
@@ -24,7 +23,6 @@ import {
   ServerCog,
   ShieldCheck,
   Sun,
-  Video,
   WifiOff,
   X,
   Zap,
@@ -79,8 +77,8 @@ const capabilities = [
     icon: ScanFace,
     label: "IDENTITY WORKFLOW",
     title: "Checks faces against each other",
-    text: "Compare two face images and return a same-person match result when that workflow is enabled.",
-    detail: "SCRFD · ArcFace",
+    text: "Use track IDs to support cross-camera re-identification, with same-person face comparison when that workflow is enabled.",
+    detail: "Track handoffs · SCRFD · ArcFace",
   },
   {
     icon: WifiOff,
@@ -107,8 +105,8 @@ const capabilities = [
     icon: KeyRound,
     label: "ACCESS CONTROL",
     title: "Access by role and camera",
-    text: "Limit operators to assigned cameras and give each edge computer credentials scoped to its own feeds.",
-    detail: "Camera-level permissions",
+    text: "Give Admin, Supervisor, Operator and Auditor workflows camera-level access to assigned feeds.",
+    detail: "Role-aware camera permissions",
   },
 ];
 
@@ -165,7 +163,8 @@ const architecture = [
     rows: [
       ["API & rules", "FastAPI · SQLAlchemy"],
       ["Alerts & evidence", "PostgreSQL 16 · Alembic"],
-      ["Live operations", "SHA-256 ledger · HMAC · Redis · WebSocket · Prometheus"],
+      ["Signed evidence", "SHA-256 hash chain · HMAC signatures"],
+      ["Live state & health", "Redis · WebSocket · Prometheus metrics"],
     ],
   },
   {

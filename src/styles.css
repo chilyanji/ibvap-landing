@@ -1299,7 +1299,7 @@ h3 {
 
 .button-light:hover {
   background: var(--blue);
-  color: #fff;
+  color: var(--button-ink);
 }
 
 /* Footer */
