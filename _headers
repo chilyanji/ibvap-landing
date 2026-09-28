@@ -1,0 +1,10 @@
+# Custom headers for Cloudflare Pages or Netlify (both read this file from the site root).
+# If you edit a <script> block in index.html, recompute the hashes: python3 deploy/csp_hashes.py index.html
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-rn4ViYP2F4qiZlCgJRKVpplSfilTSZVM4GIa2Mtr5SE=' 'sha256-fXlltGwOXqy1Hbm3eAvKCgXLzNYBkR+e2QOrouwOkgE='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/index.html
+  Cache-Control: no-cache
