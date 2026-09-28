@@ -530,19 +530,34 @@ function App() {
           </div>
         </section>
 
-        <section className="section about-section" id="about">
-          <div className="wrap about-panel">
-            <div className="about-mark"><ShieldCheck size={28} strokeWidth={1.6} /></div>
-            <div className="about-copy">
-              <span className="section-kicker">ABOUT THE PROJECT</span>
-              <h2>Built for Smart India Hackathon 2026.</h2>
-              <p>IBVAP is developed for problem statement SIH26187. Remote posts, unreliable links and evidence that must stand up to later review shape the platform’s design.</p>
+        <section className="section about-section" id="about" aria-labelledby="about-title">
+          <div className="wrap">
+            <div className="about-grid">
+              <div className="about-copy">
+                <span className="section-kicker">ABOUT THE PROJECT</span>
+                <h2 id="about-title">About us</h2>
+                <p>We’re building IBVAP for Smart India Hackathon 2026 under problem statement SIH26187. We started from three facts about border posts: they’re remote, their links are unreliable, and an alert is only useful if it can be trusted later.</p>
+                <p>Every design choice in IBVAP follows from those three facts. We run the vision work at the camera, keep alerts safe through outages, and make the evidence record verifiable.</p>
+              </div>
+
+              <dl className="about-facts">
+                <div><dt>Competition</dt><dd>Smart India Hackathon 2026</dd></div>
+                <div><dt>Problem statement</dt><dd>SIH26187</dd></div>
+                <div><dt>Team</dt><dd>Tech Tofaan</dd></div>
+                <div><dt>Institute</dt><dd>MMMUT Gorakhpur</dd></div>
+                <div><dt>Stage</dt><dd>Working prototype</dd></div>
+              </dl>
             </div>
-            <div className="about-facts">
-              <div><span>COMPETITION</span><strong>Smart India Hackathon 2026</strong></div>
-              <div><span>PROBLEM STATEMENT</span><strong>SIH26187</strong></div>
-              <div><span>PLATFORM</span><strong>Intelligent Border Video Analytics</strong></div>
-            </div>
+
+            <h3 className="team-title">The team</h3>
+            <ul className="team-list">
+              <li className="team-member"><span className="team-avatar" aria-hidden="true">AM</span><div><strong className="team-name">Arpita Mishra</strong><span className="team-role">AI model training</span></div></li>
+              <li className="team-member"><span className="team-avatar" aria-hidden="true">SK</span><div><strong className="team-name">Saumyjeet Kumar</strong><span className="team-role">AI model training</span></div></li>
+              <li className="team-member"><span className="team-avatar" aria-hidden="true">SM</span><div><strong className="team-name">Shivam Mishra</strong><span className="team-role">AI model training</span></div></li>
+              <li className="team-member"><span className="team-avatar" aria-hidden="true">SK</span><div><strong className="team-name">Saurabh Kumar</strong><span className="team-role">Backend and system design</span></div></li>
+              <li className="team-member"><span className="team-avatar" aria-hidden="true">S</span><div><strong className="team-name">Satyavrat</strong><span className="team-role">Backend design</span></div></li>
+              <li className="team-member"><span className="team-avatar" aria-hidden="true">VS</span><div><strong className="team-name">Vishaka Singh</strong><span className="team-role">Research</span></div></li>
+            </ul>
           </div>
         </section>
 
