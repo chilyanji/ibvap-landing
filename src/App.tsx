@@ -105,7 +105,7 @@ const capabilities = [
     icon: KeyRound,
     label: "ACCESS CONTROL",
     title: "Access by role and camera",
-    text: "Give Admin, Supervisor, Operator and Auditor workflows camera-level access to assigned feeds.",
+    text: "Enforce camera-level permissions for Admin, Supervisor, Operator and Auditor workflows, with operators limited to assigned feeds.",
     detail: "Role-aware camera permissions",
   },
 ];
@@ -325,6 +325,8 @@ function App() {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
+    const themeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+    if (themeColor) themeColor.content = theme === "dark" ? "#0F1B21" : "#E8ECE4";
     try {
       localStorage.setItem("ibvap-theme", theme);
     } catch {
